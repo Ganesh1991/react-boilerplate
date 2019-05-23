@@ -7,5 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ganesh Deshmukh",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ganesh1991/react-boilerplate.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Ganesh1991/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Ganesh1991/react-boilerplate#readme"
 }
