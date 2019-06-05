@@ -4,8 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+    "dev:hot": "npm run dev -- --hot",
+    "test": "jest",
+    "format": "pretty-quick",
+    "lint": "eslint ./"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "author": "Ganesh Deshmukh",
   "license": "ISC",
@@ -21,16 +30,42 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^8.0.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-standard": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
+    "jest-dom": "^3.4.0",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2"
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.9.0"
   }
 }
